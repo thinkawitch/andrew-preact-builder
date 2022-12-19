@@ -1,0 +1,19 @@
+{
+  "parse": false,
+  "compress": false,
+  "mangle": false,
+  "format": {
+    "semicolons": false,
+    "beautify": true
+  },
+  "sourceMap": false,
+  "ecma": 2020,
+  "enclose": false,
+  "keep_classnames": true,
+  "keep_fnames": true,
+  "ie8": false,
+  "module": true,
+  "nameCache": null,
+  "safari10": false,
+  "toplevel": false
+}

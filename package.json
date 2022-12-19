@@ -1,0 +1,30 @@
+{
+  "name": "andrew-preact-builder",
+  "description": "Build preact for modern browser, no mangle.",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "build-all": "npm-run-all --sequential clean build:*",
+    "build:htm": "microbundle build -i src/htm/htm.js -o ./dist/htm/htm.js  -f modern --no-generateTypes --no-sourcemap --no-compress",
+    "build:preact": "microbundle build -i src/preact/preact.js -o ./dist/preact/preact.js  -f modern --no-generateTypes --no-sourcemap --no-compress",
+    "build:devtools": "microbundle build -i src/preact/preact.devtools.js -o dist/preact/preact.devtools.js -f modern --no-generateTypes --no-sourcemap --no-compress",
+    "build:hooks": "microbundle build -i src/preact/preact.hooks.js -o dist/preact/preact.hooks.js -f modern --no-generateTypes --no-sourcemap --no-compress",
+    "build:compat": "microbundle build -i src/preact/preact.compat.js -o dist/preact/preact.compat.js -f modern --no-generateTypes --no-sourcemap --no-compress",
+    "build:preact-router": "microbundle build -i src/preact-router/preact-router.js -o dist/preact-router/preact-router.js -f modern --no-generateTypes --no-sourcemap --no-compress",
+    "build:preact-router.match": "microbundle build -i src/preact-router/preact-router.match.js -o dist/preact-router/preact-router.match.js -f modern --no-generateTypes --no-sourcemap --no-compress",
+    "build:rename": "./build-rename.sh",
+    "build:fix-import": "./build-fix-import.sh",
+    "build:make-smaller": "./build-make-smaller.sh"
+  },
+  "uncomment-to-remove-warning-dependencies": {
+    "preact": "./src/preact/dependency.js"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "terser": "^5.16.1"
+  }
+}

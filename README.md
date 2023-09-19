@@ -21,9 +21,9 @@ git clone https://github.com/developit/htm.git ./
 ```shell
 # create new branch from specific release, to build from
 cd ./original/preact
-git checkout -b temp-10.11.3 10.11.3
+git checkout -b temp-10.17.1 10.17.1
 cd ./original/preact-router
-git checkout -b temp-4.1.0 4.1.0
+git checkout -b temp-4.1.2 4.1.2
 ```
 
 ```shell
